@@ -199,7 +199,7 @@ variable "freeform_tags" {
     vcn               = {}
   }
   description = "Freeform tags to be applied to created resources."
-  type        = any
+  type        = map(map(string))
 }
 
 variable "defined_tags" {
@@ -213,5 +213,5 @@ variable "defined_tags" {
     vcn               = {}
   }
   description = "Defined tags to be applied to created resources. Must already exist in the tenancy."
-  type        = any
+  type        = map(map(string))
 }
